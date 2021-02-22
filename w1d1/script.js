@@ -9,8 +9,19 @@ function isPrime(num) {
   return isPrime;
 }
 
-console.log(isPrime(9));
+// console.log(isPrime(9));
 
-function fiveFirstPrime() {
-  let list = [];
+function printPrimeNumbers(num) {
+  let arr = [];
+  let i = 2;
+  while (arr.length < num) {
+    let isPrime = true;
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) isPrime = false;
+    }
+    if ((isPrime = true)) arr.push(i);
+  }
+  return arr;
 }
+
+console.log(printPrimeNumbers(5));
