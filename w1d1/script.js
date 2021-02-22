@@ -11,4 +11,6 @@ function isPrime(num) {
 
 console.log(isPrime(9));
 
-function fiveFirstPrime() {}
+function fiveFirstPrime() {
+  let list = [];
+}
