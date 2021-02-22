@@ -1,0 +1,5 @@
+assignment without a "let" of "const" gives an error in strict mode
+
+break, continue, else, if, char //
+
+a algorithm is a set of instructions to achieve specific task where as a 
