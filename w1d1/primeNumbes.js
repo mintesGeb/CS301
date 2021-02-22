@@ -1,4 +1,6 @@
-console.log("Mintes");
+"use strict";
+
+onsole.log("Mintes");
 
 // console.log(isPrime(9));
 
