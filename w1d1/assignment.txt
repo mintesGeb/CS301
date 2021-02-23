@@ -1,5 +1,26 @@
-assignment without a "let" of "const" gives an error in strict mode
+*assignment without a "let" of "const" gives an error in strict mode
 
-break, continue, else, if, char //
+*break, continue, else, if, char // 5 reserved keywords in Java script 
 
-a algorithm is a set of instructions to achieve specific task where as a 
+a algorithm is a set of instructions to achieve specific task where as a
+computer program is  also an algorism that a a machine can execute and its composed of data and instructions.
+
+//Algorithms I perform in my daily life
+-I cook in certain steps and use specific ingredients
+-I workout certain excercise steps in order and specific steps
+
+DemoCode
+----
+"use strict";
+
+console.log(5 + 5);
+
+const X = 2;
+const Y = 3;
+console.log(X + Y);
+
+let x = 8;
+let y = 9;
+
+console.log(x + y);
+-------

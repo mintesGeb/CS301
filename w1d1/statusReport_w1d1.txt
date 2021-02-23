@@ -1,0 +1,20 @@
+https://github.com/mintesGeb/CS301/tree/main/w1d1
+
+Hi, this is Mintes.
+
+I have answered all the questions and I was able to finish just before lab time ended which means it took me about an hour.
+THe difficulty level was pretty easy except the use of technology and manuvering the assignment submission process took some time.
+
+since I have taken this weeks course to get ready for the JS test, I was pretty familiar with most of the concepts , but I did learn a lott.
+one of the things I learned is the importance of using "use strict"; for the developer. It restricts the addition of variables without intention,
+it restricts type mistakes and helps us double check the property of a variable we create.
+
+Since I practiced a little bit of js, I took the exampled we learned in class (prime numbers) and practiced writing code. it can be viewd in my github link.
+
+Thank you for taking time to listen to online students and taking questions. I also want to thank you for fixing mic related issues in the morning, our experience was 
+much more improved after that.
+
+Question
+-How do you compare browser code editors and independent code editors? What are appropriate usage of both?
+
+Thank you
