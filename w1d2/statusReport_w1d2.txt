@@ -1,0 +1,18 @@
+https://github.com/mintesGeb/CS301/tree/main/w1d2
+
+Hi Professor, this is Mintes.
+
+I have answered all the questions and coding exercises. I was able to finish few minutes after class ended and compiled them into github.
+the difficulty level was easy although the practice helped me remember what I have practiced in the past. All in all 2 hours is what it took me to finish.
+I also remembered to push the final touch up of my codes and text files.
+-I haven't encountered any problems in this day exercise, and  it is because I am revising all this and not my first time.
+
+I did learn new things and preferred methods during this class and reading assignment. I was able write neat and working codes.
+
+-The (+) preceeding "prompt" changes the string input into number.
+-The (??) operator checks if the first number is defined or not null before returning it or the other operand.
+
+
+Question 
+-I couldn't find !! operator anywhere in the reading . I do know the meaning of ! , || , && and ?? 
+but !! is what is in the assignemt and It is something to learn in class in the morning in class.

@@ -22,8 +22,15 @@
 ?? operator between two variables returns the first element if it is neither 
 undefined nor null otherwise the other element will be returned
 
-let x= " " ?? 2 //2 because " " is null
-let y= 3 ?? 4 ?? 3 because it is the first defined element
+
+
+let x= " " ?? 2 ; //2 because " " is null
+let y= 3 ?? 4 ; // 3 because it is the first defined element
+
+|| - operator that returns true when one operand is true - other wise false 
+
+let a = true || 0 ; //true
+let b = " " || 5; //5
 
 5. this is true. the vice verca is false
 
