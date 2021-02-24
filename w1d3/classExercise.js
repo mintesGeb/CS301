@@ -36,23 +36,35 @@ const prompt = require("prompt-sync")();
 // }
 
 // -----Line break----
-let inputEmpType = prompt(
-  "what is your employment type? press a : if salaried or press b : not salaried  "
-);
-let inputSales = prompt("How much did you sale ? ");
-let commission;
-if (inputEmpType === "a") {
-  if (sales < 300) {
-    commission = 0;
-  } else if (sales > 300 && saless < 500) {
-    commission = 0.01 * sales;
-  } else {
-    commission = 0.02 * sales;
-  }
+// let inputEmpType = prompt(
+//   "what is your employment type? press a : if salaried or press b : not salaried  "
+// );
+// let inputSales = prompt("How much did you sale ? ");
+// let commission;
+// if (inputEmpType === "a") {
+//   if (sales < 300) {
+//     commission = 0;
+//   } else if (sales > 300 && saless < 500) {
+//     commission = 0.01 * sales;
+//   } else {
+//     commission = 0.02 * sales;
+//   }
+// } else {
+//   if (sales >= 300 && saless <= 500) {
+//     commission = 0.01 * sales;
+//   } else {
+//     commission = 0.02 * sales;
+//   }
+// }
+
+let inputAge = +prompt("please ente your age: ");
+
+if (inputAge <= 0) {
+  console.log("please enter valid age ");
+} else if (inputAge < 14) {
+  console.log("You cant drive yet");
+} else if (inputAge < 19) {
+  console.log("You can drive under supervision");
 } else {
-  if (sales >= 300 && saless <= 500) {
-    commission = 0.01 * sales;
-  } else {
-    commission = 0.02 * sales;
-  }
+  console.log("You can drive");
 }
