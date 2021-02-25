@@ -1,4 +1,5 @@
-let x = 2000;
+let prompt = require("prompt-sync")();
+let x = +prompt("Enter year to check: ");
 let leapYear;
 
 if (x % 4 === 0) {
