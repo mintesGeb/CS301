@@ -1,0 +1,22 @@
+https://github.com/mintesGeb/CS301/tree/main/w1d3
+
+
+Hi Professor, this is Mintes.
+
+I have answered all the assignment questions and I was able to finish in about 2.5 hours.
+The coding assignment is helping me solidify my knowlege prior to this program. Most of 
+the concepts are revisions for me, I'm learning some new things nevertheless.
+
+I learned the importance of the break statement in the 'switch' conditional branching.
+If we dont use break, it will continue to execute the next commands and statements.
+
+I also was, because of the exercises, able to see and distinguish which problems need 
+progaming solution that uses the 'switch' or the 'if/else' conditional branching .
+
+Question:
+
+Do you prefer readablity of a code or simplicity/neat/short of a code. Because when we 
+learn different ways of doing one thing , we must also know the effect and have a reasonable
+preferences.
+
+thank you

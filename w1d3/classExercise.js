@@ -69,19 +69,29 @@ const prompt = require("prompt-sync")();
 //   console.log("You can drive");
 // }
 
-var foo = 0;
-switch (foo) {
-  case -1:
-    console.log("negative 1");
-    break;
-  case 0:
-    console.log(0);
-  case 1:
-    console.log(1);
-    break;
-  case 2:
-    console.log(2);
-    break;
-  default:
-    console.log("default");
+// var foo = 0;
+// switch (foo) {
+//   case -1:
+//     console.log("negative 1");
+//     break;
+//   case 0:
+//     console.log(0);
+//   case 1:
+//     console.log(1);
+//     break;
+//   case 2:
+//     console.log(2);
+//     break;
+//   default:
+//     console.log("default");
+// }
+// Write a program to get an integer input from user and outputs if the
+// entered number is even or odd.
+
+let num = +prompt("Please enter a number to check if it's even or odd: ");
+
+if (num % 2 === 0) {
+  console.log(num + " is even");
+} else {
+  console.log(num + " is odd");
 }
