@@ -19,4 +19,8 @@ Do you prefer readablity of a code or simplicity/neat/short of a code. Because w
 learn different ways of doing one thing , we must also know the effect and have a reasonable
 preferences.
 
+p.s.
+-all the class exercises and coding examples are in one VS code file, classExercise.js
+-the table for 4, 5 are in the word file that has the programing exercise
+
 thank you
