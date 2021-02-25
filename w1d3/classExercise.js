@@ -57,14 +57,31 @@ const prompt = require("prompt-sync")();
 //   }
 // }
 
-let inputAge = +prompt("please ente your age: ");
+// let inputAge = +prompt("please ente your age: ");
 
-if (inputAge <= 0) {
-  console.log("please enter valid age ");
-} else if (inputAge < 14) {
-  console.log("You cant drive yet");
-} else if (inputAge < 19) {
-  console.log("You can drive under supervision");
-} else {
-  console.log("You can drive");
+// if (inputAge <= 0) {
+//   console.log("please enter valid age ");
+// } else if (inputAge < 14) {
+//   console.log("You cant drive yet");
+// } else if (inputAge < 19) {
+//   console.log("You can drive under supervision");
+// } else {
+//   console.log("You can drive");
+// }
+
+var foo = 0;
+switch (foo) {
+  case -1:
+    console.log("negative 1");
+    break;
+  case 0:
+    console.log(0);
+  case 1:
+    console.log(1);
+    break;
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("default");
 }

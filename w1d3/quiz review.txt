@@ -1,0 +1,15 @@
+1 - 
+JavaScript is Dynamically typed means at run time variable type is determined buy what is dynamically assigned to them .
+
+2 -
+JavaScriipt is looselu typed means we do not have to specify types of vatiables in advance
+
+3 - Null is assigned by programmer to indicate no known value yet. Undefined is the value given by the compiler to the variables that have not beenasssigned a value
+
+4 - falsy 0, null, "", Nan, undefined, fasle, 0.0, everthing else is truthy
+
+5 - === because its a strict equality. "6" === 6 
+ 
+6 - user input is string , where it needs to be changed to calculatable Number
+
+7 - 
