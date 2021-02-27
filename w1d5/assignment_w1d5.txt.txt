@@ -1,0 +1,28 @@
+all coding is pushed to github under CS301/w1d5
+
+From Reading: 
+
+1. alternatives to default parameters - setting a default value for parameter not in the function 
+declaration but at it's execution stage.
+
+eg : 
+function printText (text){
+if (text === undefined){
+text="no text";
+}
+console.log(text);
+}
+printText();
+
+
+
+
+2. its function plus the object of the function
+eg: 
+showMessage()
+calcAge();
+
+3. The naming of a function should be able to tell what it does. and a function 
+has to be simple enough that it performs one action and not try to do everything at ones.
+In which case, we'd want to comment on it a lot. when it is simple enough it's 
+as good as it is commented.
