@@ -1,0 +1,29 @@
+https://github.com/mintesGeb/CS301/tree/main/w1d5
+
+Hello Professor,
+
+I have answered all the assignment questions. and I was able to finish in 3 hours.
+Function is a core concept and I took my time reading and absorbing all the new info. from
+javascript.info . I am familiar with the concept but there are new knowledge I learned today.
+Especially about Lexical scope in JS , and scope chain.
+I would like to say this concept is well explained an all the examples are made to
+deliver the concept in a very easy way. Thank you for that.
+
+When we refer to a variable in a program, JS engine will look for that
+variable in the current scope. If it doesn’t find it, it will look for it its
+outer scope until it reach the global scope. 
+
+The stacking diagrams that you used to illustrate what the compiler does was effective 
+to show the process.
+
+appreciation
+I thought today's(friday's) class was different from the previous days. How you handeled 
+the class and managed our class time was very effective. Because students come from different
+background they may have different questions to ask or make comments but to take all that 
+and think of the whole class and evaluating if its worth to deal with it right then and there
+is a class management/handling skill. I thought I was done very well today and that gave us
+enough time to focus on the difficult and core JS concepts and go thorugh the lecture in an
+appropriate pace.
+
+Thank you
+Mintes
