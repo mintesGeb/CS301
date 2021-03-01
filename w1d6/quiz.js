@@ -38,3 +38,5 @@
 //   return reversedNumber;
 // }
 // console.log(reverse(32));
+
+function reverse(num) {}
