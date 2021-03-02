@@ -1,5 +1,5 @@
-// let i = 3;
-// while (i) console.log(i--);
+let i = 3;
+while (i) console.log(i--);
 
 // do {
 //   console.log(i);
