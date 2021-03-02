@@ -1,0 +1,13 @@
+1. exercise 1 - 
+2. page31
+
+"A is called"
+"Before B is called"
+"B is called"
+"Before C is called"
+"C is called"
+"After C is called"
+"After B is called"
+"After A is called"
+
+3. and 4. are done on a piece of paper , of which the photo is uploaded to gitHub
