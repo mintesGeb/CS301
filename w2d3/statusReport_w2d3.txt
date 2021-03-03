@@ -1,53 +1,20 @@
-https://github.com/mintesGeb/CS301/tree/main/w2d2
+https://github.com/mintesGeb/CS301/tree/main/w1d5
 
-Todays assignement was not time taking, but it enforces our knowledge on stack. 
-It took me around 45 minutes and it gave me a chance to revise the content I read
-last week.
+Todays lesson and assignment was almost new knowledge to me, which I liked .
+It challenged me and needed my my full undevided attention throughout the lecture 
+and practice afterwards. 
 
--I have answered a coding exercise question on vs (uploaded to Github link above)
--a photo of the stack exercise (also uploaded)
--and some stack answeres in a text editor (also uploaded)
+-I have completed almost all jsdoc requirements (uploaded to Github link above)
+-I have all three installs and integrations into my IDE (also uploaded)
+-I will practice and read more about mocha, now and tomorrow morning also.
 
-Today we also revised the difference between function declarations and expressions.
-In function declarations - the order of the elements of the signature is as follows
+The use of jsdoc organizes documents and helps build good discipline/habit of documenting 
+right in a d.table. and the display in an html window is amazing too.
 
-function functionName (par1, par2, ...){}
+I knew the function of mocha has a lot of application in the industry, but now that I can
+read and write JS it is kind of understandable and doable.
 
-but in expressions:
 
-const functionName = function (par1, par2, ...){}
-
-another function expression type is arrow function:
-
-const functionName = (par...) => {}
-
-Question:
-When a function is trying to look for a variable in the outer family does it only
-look at above/before it was called or throughout the function? 
-*so in that case of this example the order matters, not just existance*
-for example:
-
-function b() {
-  function a() {
-    console.log(x); //5
-  }
-  x = 5;
-  a();
-  console.log(x); //5
-}
-let x = 20;
-b();
--------------------------
-function b() {
-  function a() {
-    console.log(x); //20
-  }
-  a();
-  x = 5;
-  console.log(x); //5
-}
-let x = 20;
-b();
 
 Thank you 
 Mintes
