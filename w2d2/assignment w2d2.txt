@@ -11,3 +11,11 @@
 "After A is called"
 
 3. and 4. are done on a piece of paper , of which the photo is uploaded to gitHub
+
+from reading ---
+
+4. The have mostly same uses but declarations can be read from where ever they are placed ; 
+but function expressions must be written in an orderly manner because they cant be called before
+they are written.
+
+5. 
