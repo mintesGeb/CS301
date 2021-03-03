@@ -3,10 +3,10 @@ function areaOfCircle(rad) {
   return area;
 }
 
-function volumeOfCircle(height) {
+function volumeOfCylinder(height) {
   let area = areaOfCircle(1);
   let volume = area * height;
   return volume;
 }
 
-console.log(volumeOfCircle(1));
+console.log(volumeOfCylinder(1));
