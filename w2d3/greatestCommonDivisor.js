@@ -1,8 +1,9 @@
 "use strict";
 /**
  *
- * @param {*} num1
- * @param {*} num2
+ * @param {number} num1 The first number to look for factors of
+ * @param {number} num2 The second number to look for factors of
+ * @return {number} largest The greates common factor of nim1 & num2
  */
 const greatestCommonFactor = function (num1, num2) {
   let largest = 0;
