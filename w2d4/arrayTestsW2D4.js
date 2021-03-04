@@ -1,7 +1,7 @@
 "use strict";
 /* global require */
 
-const arrays = require("./assignmentW2D4");
+const arrays = require("./l8arrays");
 
 const assert = require("assert");
 /* 1.	Write a function addend(arr) that accepts an array of numbers as parameters and returns the sum of first and last elements of the array. */

@@ -1,6 +1,6 @@
 "use strict";
 /* global require */
-const arrays = require("./assignmentW2D4");
+const arrays = require("./l8arrays");
 // const matrixAddition = require("./l8arrays").matrixAddition;
 // const assignmentTests = require("./assignmentW2D4");
 
