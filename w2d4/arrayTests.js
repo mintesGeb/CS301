@@ -1,8 +1,8 @@
 "use strict";
 /* global require */
-const arrays = require("./l8arrays.js");
-const matrixAddition = require("./l8arrays").matrixAddition;
-const assignmentTests = require("./assignmentW2D4");
+const arrays = require("./assignmentW2D4");
+// const matrixAddition = require("./l8arrays").matrixAddition;
+// const assignmentTests = require("./assignmentW2D4");
 
 const assert = require("assert");
 /* 1.	Write a function addend(arr) that accepts an array of numbers as parameters and returns the sum of first and last elements of the array. */
@@ -11,7 +11,7 @@ describe("addend", function () {
     assert.strictEqual(arrays.addends([-1, -100, 1, 2, 3, -55]), -56);
   });
   it("tests addend odd number of elements", function () {
-    assert.strictEqual(assignmentTests.addends([-10, 2, 3, 4, 20]), 10);
+    assert.strictEqual(arrays.addends([-10, 2, 3, 4, 20]), 10);
   });
 });
 
@@ -82,7 +82,6 @@ describe("rotateNRight", function () {
       -1,
       -100,
       1,
-      2,
     ]);
   });
   it("tests rotateNRight 4", function () {

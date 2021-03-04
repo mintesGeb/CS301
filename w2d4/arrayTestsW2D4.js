@@ -81,7 +81,6 @@ describe("rotateNRight", function () {
       -1,
       -100,
       1,
-      2,
     ]);
   });
   it("tests rotateNRight 4", function () {
@@ -92,5 +91,37 @@ describe("rotateNRight", function () {
       20,
       -10,
     ]);
+  });
+});
+
+/* 6.	Write a JavaScript function that takes a string of  numbers as comma separated values, e.g, “32, 105,  -22”,  and stores it into an array, e.g., [32, 105, -22] and do following operations
+a.	Filters out negative values
+b.	Maps the filtered elements to sum of its digits
+c.	Reduce to get sum of all the elements and returns this value
+*/
+describe("filter map reduce string", function () {
+  it("tests 32, 105,  -22 ", function () {
+    assert.strictEqual(arrays.fmrString("32, 105,  -22"), 11);
+  });
+});
+
+/* 7.	Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array. */
+
+// describe("filterRange", function () {
+//   it("tests [0, 100, 3, 6, -555], 6, 60", function () {
+//     assert.strictDeepEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 60), [
+//       100,
+//       6,
+//     ]);
+//   });
+// });
+
+/* 8.	Write a function that takes an array of strings and returns array of palindrome strings only. */
+describe("filterPalindromes", function () {
+  it("tests [not, a, kayak, eagle, racecar]", function () {
+    assert.strictDeepEqual(
+      arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]),
+      ["a", "kayak", "racecar"]
+    );
   });
 });
