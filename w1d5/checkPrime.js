@@ -1,3 +1,7 @@
+"use strict";
+
+exports.checkPrime = checkPrime;
+
 const prompt = require("prompt-sync")();
 let inputCheck = +prompt("Enter a number to check: ");
 /**

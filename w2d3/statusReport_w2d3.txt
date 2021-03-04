@@ -2,11 +2,12 @@ https://github.com/mintesGeb/CS301/tree/main/w1d5
 
 Todays lesson and assignment was almost new knowledge to me, which I liked .
 It challenged me and needed my my full undevided attention throughout the lecture 
-and practice afterwards. 
+and practice afterwards. Todays study has taken me around 3.5 hours.
 
 -I have completed almost all jsdoc requirements (uploaded to Github link above)
 -I have all three installs and integrations into my IDE (also uploaded)
--I will practice and read more about mocha, now and tomorrow morning also.
+-I have tested with mocha and learned/practice how to test functions.
+-I will practice and finish all the functions by tomorrow morning also.
 
 The use of jsdoc organizes documents and helps build good discipline/habit of documenting 
 right in a d.table. and the display in an html window is amazing too.

@@ -18,4 +18,8 @@ from reading ---
 but function expressions must be written in an orderly manner because they cant be called before
 they are written.
 
-5. 
+5. True
+
+function sayHi(){alert("Hi!")}
+let sayHi =function () {alert("Hi!")}
+let sayHello = sayHi;
