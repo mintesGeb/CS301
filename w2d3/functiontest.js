@@ -18,7 +18,7 @@ describe("power", function () {
 
 describe("volumeOfHouse", function () {
   it("w=20, d=50, h=10, s=3 must give volume of 10650", function () {
-    assert.strictEqual(test.volumeOfHouse(20, 50, 10, 3), 10550);
+    assert.strictEqual(test.volumeOfHouse(20, 50, 10, 3), 10650);
   });
 });
 
@@ -27,8 +27,8 @@ describe("greatestCommonFactor", function () {
     assert.strictEqual(test.gcf(20, 28), 4);
   });
 
-  it("5 is not the gcf of 10 and 20", function () {
-    assert.strictEqual(test.gcf(10, 20), 5);
+  it("10 is the gcf of 10 and 20", function () {
+    assert.strictEqual(test.gcf(10, 20), 10);
   });
 });
 
