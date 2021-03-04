@@ -1,5 +1,13 @@
 "use strict";
 
+// jsdoc
+/**
+ *
+ * @param {number} num1 one of the numbers lcm will be looked for
+ * @param {number} num2 one of the numbers lcm will be looked for
+ * @return {number} leastCommonMultiple the least Common Multiple fot the numbers
+ */
+
 const leastCommonMultiple = function (num1, num2) {
   let leastCommonMultiple = num1 * num2;
 

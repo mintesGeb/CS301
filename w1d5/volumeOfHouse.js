@@ -1,8 +1,8 @@
 const prompt = require("prompt-sync")();
-const w = +prompt("Enter the width of the house: ");
-const d = +prompt("Enter the depth of the house: ");
-const h = +prompt("Enter the height of the house: ");
-const s = +prompt("Enter the sweep of the house: ");
+// const w = +prompt("Enter the width of the house: ");
+// const d = +prompt("Enter the depth of the house: ");
+// const h = +prompt("Enter the height of the house: ");
+// const s = +prompt("Enter the sweep of the house: ");
 /**
  *
  * @param {number} width width of the base of the house
@@ -40,9 +40,9 @@ function areaTriangle(side1, side2, side3) {
 /**
  * @return {number} volume total volume of the house
  */
-function volumeOfHouse() {
+function volumeOfHouse(w, d, h, s) {
   let volumeTotal = volumeOfBase(w, d, h) + volumeOfRoof(w, d, s);
   return volumeTotal;
 }
 
-console.log(volumeOfHouse());
+console.log(volumeOfHouse(20, 50, 10, 3));
