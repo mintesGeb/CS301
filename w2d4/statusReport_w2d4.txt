@@ -1,0 +1,11 @@
+
+
+I have finished 80-90% of the assignment and it is pushed to github. It took me the part of the
+afternoon class and some minutes after that. so around 2.5 hours.
+
+In these assignments, I got to practice my coding skills a little bit more and testing with mocca 
+became more easier with practice.
+
+Todays lesson on arrays is mostly revision but it was needed because it is a major element of js.
+Most of my time after class was spent on TA duties, helping students use the mocca and jsdoc as well as 
+eslint.
