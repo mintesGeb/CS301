@@ -13,5 +13,18 @@ Todays lesson on arrays is mostly revision but it was needed because it is a maj
 Most of my time after class was spent on TA duties, helping students use the mocca and jsdoc as well as 
 eslint.
 
+I have used arr.pop() and arr.push() often in the past .
+but I didnt use shifting & unshifting much, but because these add/remove elements to the array 
+to/from the front of the queue, the add a huge functionality. just like i used them on the exercise.
+
+The combination makes them a lot more functional.
+
+function rotateArrayLeft(arr) {
+  let shiftingElement = arr.shift();
+  arr.push(shiftingElement);
+  return arr;
+}
+
+
 Thanks 
 Mintes
