@@ -5,6 +5,7 @@ exports.rotateLeft = rotateArrayLeft;
 exports.rotateRight = rotateArrayRight;
 exports.rotateNRight = rotateArrayRightNTimes;
 exports.fmrString = addDigits_PositiveElements;
+exports.filterPalindromes=filterpalindrome;
 
 /**
  *
@@ -125,6 +126,51 @@ function addDigits_PositiveElements(str) {
 
 // -------------------------------//------------------------------//
 
+/**
+ * 
+ * @param {string} str string to check for palindrome property
+ * @returns {boolean} result true/false depending on palindrome test
+ */
 function filterpalindrome(str){
-  
+  let arr = strToArr(str);
+  let result = checkPalindrome(arr);
+  return result;
 }
+
+/**
+ * 
+ * @param {string} str to convert into array 
+ * @returns {object} arr array converted from string
+ */
+function strToArr(str){
+  let arr=[];
+  for(let each of str){
+    arr.push(each);
+  }
+  return arr;
+}
+
+/**
+ * 
+ * @param {object} arr array to check symmetry of elements 
+ * @returns {boolean} true/false, depending on test
+ */
+function checkPalindrome(arr){
+  while(arr.length>=0){
+    if (arr.length===1 || arr.length === 0) return true;
+    if(arr[0]===arr[arr.length-1]){
+      
+      arr.shift();
+      arr.pop();
+    } else return false;
+  }
+
+}
+// console.log(filterpalindrome("kayak")); 
+// console.log(filterpalindrome("racecar")); 
+// console.log(strToArr("kayak"));
+// console.log(checkPalindrome([ 'k', 'a', 'y', 'y', 'a', 'k' ]));
+
+// -------------------------------//------------------------------//
+
+[0,1,2],[9,8,7]] and [[6,5,4], [3,4,5]]  should be [ [ 6, 6, 6 ], [ 12, 12, 12 ]
