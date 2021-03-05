@@ -119,10 +119,7 @@ describe("filterRange", function () {
 /* 8.	Write a function that takes an array of strings and returns array of palindrome strings only. */
 describe("filterPalindromes", function () {
   it("tests [not, a, kayak, eagle, racecar]", function () {
-    assert.strictDeepEqual(
-      arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]),
-      ["a", "kayak", "racecar"]
-    );
+    assert.strictDeepEqual(arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]), ["a", "kayak", "racecar"]);
   });
 });
 
@@ -132,7 +129,7 @@ describe("Matrix", function () {
   describe("matrixAddition", function () {
     it("matrix addition of [[0,1,2],[9,8,7]] and [[6,5,4], [3,4,5]]  should be [ [ 6, 6, 6 ], [ 12, 12, 12 ] ]", function () {
       assert.deepStrictEqual(
-        matrixAddition(
+        arrays.matrixAddition(
           [
             [0, 1, 2],
             [9, 8, 7],

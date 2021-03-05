@@ -6,6 +6,7 @@ exports.rotateRight = rotateArrayRight;
 exports.rotateNRight = rotateArrayRightNTimes;
 exports.fmrString = addDigits_PositiveElements;
 exports.filterPalindromes=filterpalindrome;
+exports.matrixAddition=matrixAddition;
 
 /**
  *
@@ -126,16 +127,30 @@ function addDigits_PositiveElements(str) {
 
 // -------------------------------//------------------------------//
 
+function separateArrayofStrings(arr){
+
+}
+
 /**
  * 
  * @param {string} str string to check for palindrome property
  * @returns {boolean} result true/false depending on palindrome test
  */
-function filterpalindrome(str){
-  let arr = strToArr(str);
-  let result = checkPalindrome(arr);
-  return result;
+
+function filterpalindrome(array){
+  let arrNew =[];
+  for (let i=0;i<array.length;i++){
+
+    let arr = strToArr(array[i]);
+    let result = checkPalindrome(arr);
+    if (result) arrNew.push(array[i]);
+
+
+  }
+  return arrNew;
 }
+
+console.log(filterpalindrome(["not", "a", "kayak", "eagle", "racecar"]));
 
 /**
  * 
@@ -173,4 +188,27 @@ function checkPalindrome(arr){
 
 // -------------------------------//------------------------------//
 
-// [0,1,2],[9,8,7]] and [[6,5,4], [3,4,5]]  should be [ [ 6, 6, 6 ], [ 12, 12, 12 ]
+/**
+ * 
+ * @param {object} arr1 one of the objects to be matrics-added 
+ * @param {object} arr2 one of the objects to be matrics-added 
+ * @returns {object} arrNew new array of the matrics sum
+ */
+function matrixAddition (arr1, arr2){
+  let arrNew=[]
+  for (let i=0; i<arr1.length;i++){
+    let arrSmallNew=[];
+    
+    for(let j=0;j<arr1[i].length;j++){
+      let sum=0;
+      console.log(arr1[i][j],arr2[i][j]);
+      sum=arr1[i][j]+arr2[i][j];
+      arrSmallNew.push(sum);
+    }
+    arrNew.push(arrSmallNew)
+
+  }
+  return arrNew;
+}
+// [[0,1,2],[9,8,7]] and [[6,5,4], [3,4,5]]  should be [ [ 6, 6, 6 ], [ 12, 12, 12 ]
+// console.log(matrixAddition([[0,1,2],[9,8,7]],[[6,5,4], [3,4,5]]));
