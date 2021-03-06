@@ -184,7 +184,7 @@ function checkPalindrome(arr){
 // console.log(filterpalindrome("kayak")); 
 // console.log(filterpalindrome("racecar")); 
 // console.log(strToArr("kayak"));
-// console.log(checkPalindrome([ 'k', 'a', 'y', 'y', 'a', 'k' ]));
+// console.log(checkPalindrome([ 'k', 'a', 'y', 'a', 'k' ]));
 
 // -------------------------------//------------------------------//
 
