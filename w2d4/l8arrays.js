@@ -5,8 +5,9 @@ exports.rotateLeft = rotateArrayLeft;
 exports.rotateRight = rotateArrayRight;
 exports.rotateNRight = rotateArrayRightNTimes;
 exports.fmrString = addDigits_PositiveElements;
-exports.filterPalindromes=filterpalindrome;
-exports.matrixAddition=matrixAddition;
+exports.filterPalindromes = filterpalindrome;
+exports.matrixAddition = matrixAddition;
+exports.filterRange = filterRange;
 
 /**
  *
@@ -67,7 +68,15 @@ function rotateArrayRightNTimes(arr, n) {
   }
   return arr;
 }
-// console.log(rotateArrayRightNTimes([-1, -100, 1, 2, 3, -55], 3));
+function rotateNRight(array, stepsToShift) {
+  for (let i = 0; i < stepsToShift; i++) {
+    array.unshift(array.pop());
+  }
+
+  return array;
+}
+// console.log(rotateNRight([-10, 2, 3, 4, 20], 4));
+// console.log(rotateArrayRightNTimes([-10, 2, 3, 4, 20], 4));
 
 // -------------------------------//------------------------------//
 
@@ -127,86 +136,97 @@ function addDigits_PositiveElements(str) {
 
 // -------------------------------//------------------------------//
 
-function separateArrayofStrings(arr){
+// /* 7.	Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array. */
+// describe("filterRange", function () {
+//   it("tests [0, 100, 3, 6, -555], 6, 60", function () {
+//     assert.strictDeepEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 60), [
+//       100,
+//       6,
+//     ]);
+//   });
+// });
 
+function filterRange(arr, a, b) {
+  let arrNew = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= a && arr[i] <= b) {
+      arrNew.push(arr[i]);
+    }
+  }
+  return arrNew;
 }
-
+console.log(filterRange([0, 100, 3, 6, -555], 6, 160));
+// -------------------------------//------------------------------//
 /**
- * 
+ *
  * @param {string} str string to check for palindrome property
  * @returns {boolean} result true/false depending on palindrome test
  */
 
-function filterpalindrome(array){
-  let arrNew =[];
-  for (let i=0;i<array.length;i++){
-
+function filterpalindrome(array) {
+  let arrNew = [];
+  for (let i = 0; i < array.length; i++) {
     let arr = strToArr(array[i]);
     let result = checkPalindrome(arr);
     if (result) arrNew.push(array[i]);
-
-
   }
   return arrNew;
 }
 
-console.log(filterpalindrome(["not", "a", "kayak", "eagle", "racecar"]));
+// console.log(filterpalindrome(["not", "a", "kayak", "eagle", "racecar"]));
 
 /**
- * 
- * @param {string} str to convert into array 
+ *
+ * @param {string} str to convert into array
  * @returns {object} arr array converted from string
  */
-function strToArr(str){
-  let arr=[];
-  for(let each of str){
+function strToArr(str) {
+  let arr = [];
+  for (let each of str) {
     arr.push(each);
   }
   return arr;
 }
 
 /**
- * 
- * @param {object} arr array to check symmetry of elements 
+ *
+ * @param {object} arr array to check symmetry of elements
  * @returns {boolean} true/false, depending on test
  */
-function checkPalindrome(arr){
-  while(arr.length>=0){
-    if (arr.length===1 || arr.length === 0) return true;
-    if(arr[0]===arr[arr.length-1]){
-      
+function checkPalindrome(arr) {
+  while (arr.length >= 0) {
+    if (arr.length === 1 || arr.length === 0) return true;
+    if (arr[0] === arr[arr.length - 1]) {
       arr.shift();
       arr.pop();
     } else return false;
   }
-
 }
-// console.log(filterpalindrome("kayak")); 
-// console.log(filterpalindrome("racecar")); 
+// console.log(filterpalindrome("kayak"));
+// console.log(filterpalindrome("racecar"));
 // console.log(strToArr("kayak"));
 // console.log(checkPalindrome([ 'k', 'a', 'y', 'a', 'k' ]));
 
 // -------------------------------//------------------------------//
 
 /**
- * 
- * @param {object} arr1 one of the objects to be matrics-added 
- * @param {object} arr2 one of the objects to be matrics-added 
+ *
+ * @param {object} arr1 one of the objects to be matrics-added
+ * @param {object} arr2 one of the objects to be matrics-added
  * @returns {object} arrNew new array of the matrics sum
  */
-function matrixAddition (arr1, arr2){
-  let arrNew=[]
-  for (let i=0; i<arr1.length;i++){
-    let arrSmallNew=[];
-    
-    for(let j=0;j<arr1[i].length;j++){
-      let sum=0;
-      console.log(arr1[i][j],arr2[i][j]);
-      sum=arr1[i][j]+arr2[i][j];
+function matrixAddition(arr1, arr2) {
+  let arrNew = [];
+  for (let i = 0; i < arr1.length; i++) {
+    let arrSmallNew = [];
+
+    for (let j = 0; j < arr1[i].length; j++) {
+      let sum = 0;
+      console.log(arr1[i][j], arr2[i][j]);
+      sum = arr1[i][j] + arr2[i][j];
       arrSmallNew.push(sum);
     }
-    arrNew.push(arrSmallNew)
-
+    arrNew.push(arrSmallNew);
   }
   return arrNew;
 }

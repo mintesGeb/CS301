@@ -119,10 +119,12 @@ describe("filterRange", function () {
 /* 8.	Write a function that takes an array of strings and returns array of palindrome strings only. */
 describe("filterPalindromes", function () {
   it("tests [not, a, kayak, eagle, racecar]", function () {
-    assert.strictDeepEqual(arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]), ["a", "kayak", "racecar"]);
+    assert.strictDeepEqual(
+      arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]),
+      ["a", "kayak", "racecar"]
+    );
   });
 });
-
 
 //* 9. Do matrix addition and return result on matrix format for following:
 describe("Matrix", function () {

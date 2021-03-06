@@ -1,7 +1,7 @@
 "use strict";
 /* global require */
 const arrays = require("./l8arrays");
-// const matrixAddition = require("./l8arrays").matrixAddition;
+const matrixAddition = require("./l8arrays").matrixAddition;
 // const assignmentTests = require("./assignmentW2D4");
 
 const assert = require("assert");
@@ -109,7 +109,7 @@ describe("filter map reduce string", function () {
 /* 7.	Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array. */
 describe("filterRange", function () {
   it("tests [0, 100, 3, 6, -555], 6, 60", function () {
-    assert.strictDeepEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 60), [
+    assert.strictEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 160), [
       100,
       6,
     ]);

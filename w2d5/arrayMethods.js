@@ -80,7 +80,7 @@ function enhancedIncludes(arr, n) {
 
   return arrIndex;
 }
-console.log(enhancedIncludes([1, 4, 2, 3, 4, 5], 4));
+// console.log(enhancedIncludes([1, 4, 2, 3, 4, 5], 4));
 // --------------------------- // --------------------------- //
 function ssReverse(arr) {
   let arrNew = [];
@@ -92,6 +92,7 @@ function ssReverse(arr) {
 
   return arrNew;
 }
+
 // console.log(ssReverse([1, 2, 3, 4, 5, 6]));
 
 // let x = [];
@@ -99,3 +100,67 @@ function ssReverse(arr) {
 // y.splice(0, 0, x[x.length - 1]);
 
 // console.log(x.concat([7]))
+
+// --------------------------- // --------------------------- //
+
+// Given an expression array exp, write a program to examine whether the pairs
+// and the orders of “{“, “}”, “(“, “)”, “[“, “]” are correct in exp.
+//
+// Example:
+// Input: exp = ["(", ")", "[", "{", "}", "]"]
+// Output: Balanced
+// Input: exp = ["[", "(", "]", ")"]
+// Output: Not Balanced
+function orderRight(exp) {
+  let curly = 0;
+  let parenth = 0;
+  let bress = 0;
+  let status;
+  let balanceStatus;
+  for (let i = 0; i < exp.length; i++) {
+    if (exp[i] === "{") {
+      culrly++;
+    } else if (exp[i] === "(") {
+      parenth++;
+    } else if (exp[i] === "[") {
+      bress++;
+    } else if (exp[i] === "}") {
+      culrly--;
+    } else if (exp[i] === ")") {
+      parenth--;
+    } else if (exp[i] === "]") {
+      bress--;
+    }
+  }
+
+  if (curly !== 0 || parenth !== 0 || bress !== 0) {
+    balanceStatus = "Not Balanced";
+  }
+  balanceStatus;
+}
+
+// let curly;
+// let parenth;
+// let bress;
+
+// if (exp[i] === "{") curlyStatus = "open";
+// else if (exp[i] === "(") parenth = "open";
+// else if (exp[i] === "[") bress = "open";
+
+// if (exp[i] === "{" || exp[i] === "(" || exp[i] === "[") {
+//   status = "open";
+//   balanceStatus = "Not Balanced";
+// }
+// --------------------------- // --------------------------- //
+
+// let a = [33, 512, 23, 23, 6, 323, 53, 24];
+// let x = a.sort(comparator);
+
+// console.log(x);
+
+// function comparator(a, b) {
+//   if (a > b) return -1;
+//   if (a === b) return 0;
+//   if (a < b) return 1;
+// }
+// --------------------------- // --------------------------- //
