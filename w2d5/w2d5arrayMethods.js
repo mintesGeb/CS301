@@ -86,20 +86,21 @@ describe("ssReverse", function () {
 });
 
 // /*   6. (EC) Write a function that merges two sorted arrays into one single sorted array. Make use of shift and push array methods. */
-// describe("merge via shift and push", function () {
+describe("merge via shift and push", function () {
+  // it("shiftPush helper", function () {
+  //   console.log(arrays.shiftPush([1, 3, 8], 4, []));
+  //   assert.deepStrictEqual(arrays.shiftPush([1, 3, 8], 4, []), [1, 3]);
+  // });
 
-//     it("shiftPush helper", function () {
-//         console.log(arrays.shiftPush([1, 3, 8], 4, []));
-//         assert.deepStrictEqual(arrays.shiftPush([1, 3, 8], 4, []), [1, 3]);
-//     });
-
-//     it("138 merge with 059 ", function () {
-//         console.log(arrays.merge([1, 3, 8], [0, 5, 9]));
-//         assert.deepStrictEqual(arrays.merge([1, 3, 8], [0, 5, 9]), [0, 1, 3, 5, 8, 9]);
-//     });
-
-//     it("138 merge with 059 mergeTwo ", function () {
-//         console.log(arrays.mergeTwo([1, 3, 8], [0, 5, 9]));
-//         assert.deepStrictEqual(arrays.mergeTwo([1, 3, 8], [0, 5, 9]), [0, 1, 3, 5, 8, 9]);
-//     });
-// });
+  it("138 merge with 059 mergeTwo ", function () {
+    console.log(arrays.mergeTwo([1, 3, 8], [0, 5, 9]));
+    assert.deepStrictEqual(arrays.mergeTwo([1, 3, 8], [0, 5, 9]), [
+      0,
+      1,
+      3,
+      5,
+      8,
+      9,
+    ]);
+  });
+});

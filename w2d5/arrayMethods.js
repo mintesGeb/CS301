@@ -6,6 +6,7 @@ exports.isPalindrome = isPalindrome;
 exports.reverse2String = reverseAndJoin;
 exports.enhancedIncludes = enhancedIncludes;
 exports.ssReverse = ssReverse;
+exports.mergeTwo = mergeTwo;
 
 // --------------------------- // --------------------------- //
 function spliceInsert(n, arr1, arr2) {
@@ -115,8 +116,8 @@ function orderRight(exp) {
   let curly = 0;
   let parenth = 0;
   let bress = 0;
-  let status;
-  let balanceStatus;
+
+  let balanceStatus = true;
   for (let i = 0; i < exp.length; i++) {
     if (exp[i] === "{") {
       culrly++;
@@ -124,20 +125,30 @@ function orderRight(exp) {
       parenth++;
     } else if (exp[i] === "[") {
       bress++;
-    } else if (exp[i] === "}") {
-      culrly--;
-    } else if (exp[i] === ")") {
-      parenth--;
-    } else if (exp[i] === "]") {
-      bress--;
+    }
+
+    for (let j = i + 1; j < exp.length; j + 2) {
+      if (exp[j] === "}") {
+        culrly--;
+        exp.slice(j, j + 1);
+        break;
+      } else if (exp[j] === ")") {
+        parenth--;
+        break;
+      } else if (exp[j] === "]") {
+        bress--;
+        break;
+      }
+    }
+
+    if (curly !== 0 || parenth !== 0 || bress !== 0) {
+      balanceStatus = false;
     }
   }
 
-  if (curly !== 0 || parenth !== 0 || bress !== 0) {
-    balanceStatus = "Not Balanced";
-  }
   balanceStatus;
 }
+// console.log(orderRight(["(", ")", "[", "{", "}", "]"]));
 
 // let curly;
 // let parenth;
@@ -152,15 +163,23 @@ function orderRight(exp) {
 //   balanceStatus = "Not Balanced";
 // }
 // --------------------------- // --------------------------- //
+function mergeTwo(arr1, arr2) {
+  for (let each of arr2) {
+    arr1.push(each);
+  }
+  arr1.sort(comparator);
+  return arr1;
+}
 
+console.log(mergeTwo([1, 3, 8], [0, 5, 9]));
 // let a = [33, 512, 23, 23, 6, 323, 53, 24];
 // let x = a.sort(comparator);
 
 // console.log(x);
 
-// function comparator(a, b) {
-//   if (a > b) return -1;
-//   if (a === b) return 0;
-//   if (a < b) return 1;
-// }
+function comparator(a, b) {
+  if (a > b) return 1;
+  if (a === b) return 0;
+  if (a < b) return -1;
+}
 // --------------------------- // --------------------------- //

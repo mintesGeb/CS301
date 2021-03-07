@@ -1,0 +1,10 @@
+https://github.com/mintesGeb/CS301/tree/m ain/w2d5
+
+This weeks assignments(Thursday and Friday) are really good exercises on problem solving(even though
+thet are focused on arrays) - arrays are essential part of programming.
+
+Thursdays exercises helped make Fridays questions easier and the new array methods we learned
+such as slice, splice , for ...of ,  concat, index of , indcludes, reverse, join etc.
+have made different problems easier to solve. Looping through arrays is a common process
+to perform and solve different problems. creating empty arrays and pushing in solutions is a common
+way to get an array to return.
