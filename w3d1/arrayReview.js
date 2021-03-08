@@ -4,7 +4,7 @@ exports.findMin = findMin;
 exports.sumOddIndicesValues = sumOddIndicesValues;
 exports.sumArrays = sumArrays;
 
-//  a,b,c,e,f,g,h,j
+//  a,b,c,e,g,j
 
 /**
  *
@@ -12,7 +12,7 @@ exports.sumArrays = sumArrays;
  * @returns {number}num the minimum number in the array
  */
 function findMin(arr) {
-  let min = arr[0];
+  let min = Infinity;
 
   for (let each of arr) {
     if (each < min) {

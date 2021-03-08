@@ -1,5 +1,13 @@
 "use strict";
 
+exports.isPersonEqual = isPersonEqual;
+exports.countProperties = countProperties;
+exports.checkSpam = checkSpam;
+exports.suffix = suffix;
+exports.titleCase = titleCase;
+exports.getAverageAge = getAverageAge;
+exports.sumFirst = sumFirst;
+
 // let car = {
 //   make: "Toyota",
 //   model: "Camry",
@@ -23,20 +31,20 @@
 
 //-------------------
 
-// function isPersonEqual(obj1, obj2) {
-//   if (obj1.name !== obj2.name && obj1.age !== obj2.age) return false;
-//   return true;
-// }
+function isPersonEqual(obj1, obj2) {
+  if (obj1.name !== obj2.name || obj1.age !== obj2.age) return false;
+  return true;
+}
 
 //-------------------
 
-// function countProperties(obj) {
-//   let count = 0;
-//   for (let prop in obj) {
-//     count++;
-//   }
-//   return count;
-// }
+function countProperties(obj) {
+  let count = 0;
+  for (let prop in obj) {
+    count++;
+  }
+  return count;
+}
 
 //-------------------
 
@@ -53,22 +61,31 @@ function checkSpam(str) {
 // console.log(checkSpam("mdfglotterydfgm"));
 
 //-------------------
-
+/**
+ *
+ * @param {string} str1 string to find suffix
+ * @param {string} str2 string to find suffix
+ * @returns {string} suf suffix o fthe strings;
+ */
 function suffix(str1, str2) {
-  let suffix;
+  let sufIndex;
+  let suf;
   let str1Counter = str1.length - 1;
   let str2Counter = str2.length - 1;
+  if (str1[str1Counter] !== str2[str2Counter]) return "";
   while (Math.min(str1Counter, str2Counter) > 0) {
     if (str1[str1Counter] === str2[str2Counter]) {
-      suffix = str1Counter;
+      sufIndex = str1Counter;
       str1Counter--;
       str2Counter--;
     } else break;
   }
-
-  return str1.substr(suffix, str1Counter);
+  suf = str1.substr(sufIndex, str1Counter);
+  return suf;
 }
-// console.log(suffix("swimming", "walking"));
+console.log(suffix("swimming", "walking"));
+console.log(suffix("jackson", "johnson"));
+console.log(suffix("wholesome", "hohnson"));
 
 //-------------------
 /**
@@ -110,7 +127,7 @@ console.log(
  * @param {object} arr array containing multiple arrays inside
  * @returns {number} sum sum of the first element of each array inside the guven array
  */
-function sum(arr) {
+function sumFirst(arr) {
   let sum = 0;
   for (let element of arr) {
     sum += element[0];
@@ -118,7 +135,7 @@ function sum(arr) {
   return sum;
 }
 console.log(
-  sum([
+  sumFirst([
     [1, 2],
     [3, 4],
     [5, 6],
