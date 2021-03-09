@@ -1,0 +1,19 @@
+https://github.com/mintesGeb/CS301/tree/main/w3d1
+
+Hi Prof,
+I have completed all the assignemnt questions for today and will continue to read on the reading materials and 
+assisting other students the rest of the day. It has taken me around and hour and a half to complete
+and test my solution in the mocha. Everything passed through the mocha test fine.
+
+Although the topic of objects is broad and i know they are used very frequently in programming, today
+we only got started and it was fairly simple(not too hard to grasp).
+
+Strings are premitives we have been working with till now and most of the string methods are similar to
+array methods , so it is understandable as well. 
+
+ Lesson learned today:
+the difference between objects and premitives:
+objects are stored and copied by reference but premitive values are copied "as whole value"
+
+Thanks 
+Mintes
