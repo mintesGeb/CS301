@@ -1,5 +1,7 @@
 "use strict";
-// eslint-disable;
+/* eslint-disable; */
+
+exports.addToTarget = addToTarget;
 
 // ?---------- 1 --- not done
 /**
@@ -98,7 +100,7 @@ function mostFrequent(arr) {
 }
 // console.log(mostFrequent([4, 3, 6, 67, 8, 3, 6, 8, 4, 6, 9, 3, 6, 4]));
 
-// ?---------- 4 ---- not done --- recheck
+// ?---------- 4 ----  done
 
 function closestToZero(arr) {
   let array = [];
@@ -129,4 +131,54 @@ function closestToZero(arr) {
   }
   return array;
 }
-console.log(closestToZero([4, -1, -2, -3]));
+// console.log(closestToZero([1, 4, -1, -2, -5]));
+
+// ?---------- 5 ----   done
+
+function addTwoNumbers(arr1, arr2) {
+  let arrNew = [];
+  let arr1Joined = Number(arr1.join(""));
+  let arr2Joined = Number(arr2.join(""));
+  let sum = arr1Joined + arr2Joined;
+  for (let each of String(sum)) {
+    arrNew.push(Number(each));
+  }
+  return arrNew;
+}
+console.log(addTwoNumbers([1, 1], [9, 9]));
+console.log(addTwoNumbers([1, 1], [1, 2, 3]));
+
+// ?---------- 6 ----  nod done
+// function binaryAddition(str1, str2) {
+//   str1 = Number(str1);
+//   str2 = Number(str2);
+//   let strAdd = "";
+//   for (let i = Math.max(str1.length, str2.length); i > 0; i--) {
+//     let sum = 0;
+//     let addOnNext = 0;
+//     let operand1 = str1[i];
+//     let operand2 = str2[i];
+//     if (operand1 === undefined) str1[i] = 0;
+//     if (operand2 === undefined) str2[i] = 0;
+
+//     if (str1[i] === 0 && str2[i] === 0) {
+//       sum = 0;
+//       strAdd += String(sum);
+//     } else if (str1[i] === 1 || str2[i] === 1){
+//       sum = 1;
+//       strAdd += String(sum);
+//     }
+//     if (str1[i] === 1 && str2[i] === 1) {
+//       sum = 0;
+//       strAdd+=sum;
+//       addOnNext = 1;
+//     }
+//   }
+// }
+// ?---------- 7 ----  nod done
+
+// ?---------- 8 ----  nod done
+
+// ?---------- 9 ----  nod done
+
+// ?---------- 10 ----  nod done

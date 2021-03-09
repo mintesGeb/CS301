@@ -15,5 +15,8 @@ array methods , so it is understandable as well.
 the difference between objects and premitives:
 objects are stored and copied by reference but premitive values are copied "as whole value"
 
+I also have started working on the final project. Will there be a mocha file for it or no?
+
+
 Thanks 
 Mintes
