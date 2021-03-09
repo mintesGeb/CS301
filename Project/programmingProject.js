@@ -1,7 +1,10 @@
 "use strict";
 /* eslint-disable; */
-
-exports.addToTarget = addToTarget;
+exports.findPorcupineNumber = findPorcupineNumber;
+exports.exports.addToTarget = addToTarget;
+exports.mostFrequent = mostFrequent;
+exports.closestToZero = closestToZero;
+exports.addTwoNumbers = addTwoNumbers;
 
 // ?---------- 1 --- not done
 /**
@@ -68,14 +71,18 @@ function findPorcupineNumber(num) {}
 function addToTarget(arr, num) {
   let array = [];
   for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] + arr[i + 1] === num) {
-      array.push(i);
-      array.push(i + 1);
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === num) {
+        array.push(i);
+        array.push(j);
+      }
+      if (array.length === 2) return array;
     }
   }
   return array;
 }
 // console.log(addToTarget([2, 7, 11, 15], 9));
+// console.log(addToTarget([2, 3, 4], 6));
 
 // ?---------- 3 ----  done
 
@@ -98,7 +105,7 @@ function mostFrequent(arr) {
   }
   return maxChar;
 }
-// console.log(mostFrequent([4, 3, 6, 67, 8, 3, 6, 8, 4, 6, 9, 3, 6, 4]));
+// console.log(mostFrequent([4, 3, 6, 8, 3, 8, 4, 9, 6, 4]));
 
 // ?---------- 4 ----  done
 
@@ -131,7 +138,8 @@ function closestToZero(arr) {
   }
   return array;
 }
-// console.log(closestToZero([1, 4, -1, -2, -5]));
+console.log(closestToZero([1, 4, -1, -2, -5]));
+console.log(closestToZero([4, 2, -1, 3, -2, -3]));
 
 // ?---------- 5 ----   done
 
@@ -145,6 +153,8 @@ function addTwoNumbers(arr1, arr2) {
   }
   return arrNew;
 }
+
+console.log(addTwoNumbers([3, 4, 2], [4, 6, 5]));
 console.log(addTwoNumbers([1, 1], [9, 9]));
 console.log(addTwoNumbers([1, 1], [1, 2, 3]));
 
