@@ -4,6 +4,7 @@ exports.findPorcupineNumber = findPorcupineNumber;
 exports.exports.addToTarget = addToTarget;
 exports.mostFrequent = mostFrequent;
 exports.closestToZero = closestToZero;
+// exports.addTwoNumbers = addTwoNumbers;
 exports.addTwoNumbers = addTwoNumbers;
 
 // ?---------- 1 --- not done
@@ -185,10 +186,26 @@ console.log(addTwoNumbers([1, 1], [1, 2, 3]));
 //     }
 //   }
 // }
-// ?---------- 7 ----  nod done
+// ?---------- 7 ----  not done
 
-// ?---------- 8 ----  nod done
+// ?---------- 8 ----  not done
 
-// ?---------- 9 ----  nod done
+// ?---------- 9 ----  not done
 
-// ?---------- 10 ----  nod done
+// ?---------- 10 ----  not done
+
+// ?---------- 11 ----  not done
+
+// ?---------- 12 ----  not done
+
+// ?---------- 13 ----  not done
+
+// ?---------- 14 ----  not done
+
+// ?---------- 15 ----  not done
+
+// ?---------- 16 ----  not done
+
+// ?---------- 17 ----  not done
+
+// ?---------- 18 ----  not done

@@ -1,6 +1,7 @@
 "use strict";
 const assert = require("assert");
 const test = require("./programmingProject.js");
+
 /*eslint-disable*/
 
 // 1. A porcupine number is a prime number whose last digit is 9 and the next prime number that
@@ -67,8 +68,8 @@ describe("", function () {
 // 5.  Write a function, that given two arrays representing two non-negative integers with digits, adds
 // the two numbers, and return it as an array.
 
-describe("", function () {
-  it("", function () {
+describe("add numbers", function () {
+  it("add [3, 4, 2] and [4, 6, 5] as numbers and return [8,0,7] ", function () {
     assert.strictEqual(test.addTwoNumbers([3, 4, 2], [4, 6, 5]), [8, 0, 7]);
   });
 

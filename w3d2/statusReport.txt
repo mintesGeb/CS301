@@ -1,0 +1,17 @@
+https://github.com/mintesGeb/CS301/tree/main/w3d2
+
+Today's assignment was not as difficult as it  has been the past few days. It took me around  an hour during 
+afternoon lab. But the concept of recursion is not as easy. Nor the functionality is as negligible. It is
+very useful. I am also reading through js.info materials which are very uselful. It has additional 
+array methods and string methods. I'm catching up on these materials while working on the project and 
+consulting other students, in thier challenges(TA duties).
+
+The project has some challenging quesions. it's helping me read through some other documentation .
+And I have also started working on the mocha files for the final project. 
+
+recursion makes some programs and codes easy to write and read. understanding how it works
+isn't hard. but when it comes to efficiency and speed it may have it's own disadvantages.
+but at this point we dont worry much about that.
+
+Thanks,
+Mintes
