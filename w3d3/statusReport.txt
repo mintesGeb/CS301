@@ -1,0 +1,20 @@
+https://mintesgeb.github.io/
+
+Hi Prof,
+Here is a link to the homepage to my website. It hasn't taken me more than two hours to build
+the static website. But to finish and link with the javascript content(DOM) some unexpected prooblems
+arise and correcting those was a little time taking.
+
+I have practiced this atleast once in the past. It is another good practice for me but I wish there 
+was a small project we can do in groups to strengthn our knowledge and put it to practie. In the
+already formed groups we can make a good styled website. Other wise next month would be a totally different 
+subject and none of this knowledge would be usable.
+
+I havent hosted webpage in github pages in the past so this would be the first time.
+
+Question
+I havent been able to see what the validator does.
+Could you show us what it benefit and usage is like?
+
+Thank you 
+Mintes

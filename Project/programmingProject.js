@@ -1,10 +1,9 @@
 "use strict";
 /* eslint-disable; */
 exports.findPorcupineNumber = findPorcupineNumber;
-exports.exports.addToTarget = addToTarget;
+exports.addToTarget = addToTarget;
 exports.mostFrequent = mostFrequent;
 exports.closestToZero = closestToZero;
-// exports.addTwoNumbers = addTwoNumbers;
 exports.addTwoNumbers = addTwoNumbers;
 
 // ?---------- 1 --- not done
@@ -25,7 +24,7 @@ function checkPrime(num) {
   }
   return isPrime;
 }
-// console.log(checkPrime(49));
+console.log(checkPrime(49));
 
 /**
  *
