@@ -22,10 +22,20 @@ for (let i = 0; i < users.length; i++) {
   if (users[i].id === 3) console.log(users[i].name);
 }
 
-let arr = [1, 2, 3];
+let arr = [1, 5, 2, 4, 3];
 let arr2 = ["mintes", "robbie", "amen"];
-console.log(arr2.map((item) => item.length));
+console.log(arr2);
+let joined = arr2.join();
+console.log(joined);
+let splitAgain = joined.split(",");
+console.log(splitAgain);
+for (let each of splitAgain) {
+  console.log(each);
+}
+console.log();
+// console.log(arr2.map((item) => item.split()));
 function addstr(n) {
   return n + "abc";
 }
 // console.log(arr.map(addstr()));
+// console.log(arr.sort((a, b) => (a > b ? 1 : -1)));
