@@ -137,86 +137,96 @@ describe("add array elements as numbers", function () {
 //   string.
 //   #strobogrammatic_number
 
-// describe("strobogrammatic_number", function () {
-//   it("69 is a strobogrammatic number", function () {
-//     assert.strictEqual(test.strobogrammaticNumber("69"), true);
-//   });
+describe("strobogrammatic_number", function () {
+  it("69 is a strobogrammatic number", function () {
+    assert.strictEqual(test.strobogrammaticNumber("69"), true);
+  });
 
-//   it("101 is a strobogrammatic number", function () {
-//     assert.strictEqual(test.strobogrammaticNumber("101"), true);
-//   });
+  it("101 is a strobogrammatic number", function () {
+    assert.strictEqual(test.strobogrammaticNumber("101"), true);
+  });
 
-//   it("88 is a strobogrammatic number", function () {
-//     assert.strictEqual(test.strobogrammaticNumber("88"), true);
-//   });
+  it("88 is a strobogrammatic number", function () {
+    assert.strictEqual(test.strobogrammaticNumber("88"), true);
+  });
 
-//   it("868 is not a strobogrammatic number", function () {
-//     assert.strictEqual(test.strobogrammaticNumber("868"), false);
-//   });
-// });
+  it("868 is not a strobogrammatic number", function () {
+    assert.strictEqual(test.strobogrammaticNumber("868"), false);
+  });
+});
 
 // 10. Given an array containing n distinct numbers taken from 0,1,2,…,n, find the one that is missing
 // from the array.
 // #missing_number
 
-// describe("find the missing number", function () {
-//   it("the missing number from the given array is 2", function () {
-//     assert.strictEqual(test.missingNumber([3, 0, 1]), 2);
-//   });
+describe("find the missing number", function () {
+  it("the missing number from the given array is 2", function () {
+    assert.strictEqual(test.missingNumber([3, 0, 1]), 2);
+  });
 
-//   it("the missing number from the given array is 8", function () {
-//     assert.strictEqual(test.missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]), 8);
-//   });
-// });
+  it("the missing number from the given array is 8", function () {
+    assert.strictEqual(test.missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]), 8);
+  });
+});
 
 // 11. Given a sorted array and a target value, return the index if the target is found. If not, return the
 // index where it would be if it were inserted in order.
 // You may assume no duplicates in the array.
 // #search_insert_position
 
-// describe("search_insert_position of target", function () {
-//   it("5 exists in the given array at index of 2", function () {
-//     assert.strictEqual(test.searchInsertPosition([1, 3, 5, 6], 5), 2);
-//   });
+describe("search_insert_position of target", function () {
+  it("5 exists in the given array at index of 2", function () {
+    assert.strictEqual(test.searchInsertPosition([1, 3, 5, 6], 5), 2);
+  });
 
-//   it("2 should go in the given array at index of 1", function () {
-//     assert.strictEqual(test.searchInsertPosition([1, 3, 5, 6], 2), 1);
-//   });
+  it("2 should go in the given array at index of 1", function () {
+    assert.strictEqual(test.searchInsertPosition([1, 3, 5, 6], 2), 1);
+  });
 
-//   it("7 should go in the given array at index of 4", function () {
-//     assert.strictEqual(test.searchInsertPosition([1, 3, 5, 6], 7), 4);
-//   });
+  it("7 should go in the given array at index of 4", function () {
+    assert.strictEqual(test.searchInsertPosition([1, 3, 5, 6], 7), 4);
+  });
 
-//   it("0 should go in the given array at index of 0", function () {
-//     assert.strictEqual(test.searchInsertPosition([1, 3, 5, 6], 0), 0);
-//   });
-// });
+  it("0 should go in the given array at index of 0", function () {
+    assert.strictEqual(test.searchInsertPosition([1, 3, 5, 6], 0), 0);
+  });
+});
 
 // 12. Given an integer array nums, find the contiguous subarray (containing at least one number)
 // which has the largest sum and return its sum.
 // #maximum_subarray
 
-// describe("sub-array to give the largest sum", function () {
-//   it("[4,-1,2,1] is the subarray with largest sum, 6, from[-2,1,-3,4,-1,2,1,-5,4]", function () {
-//     assert.strictEqual(test.maxSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6);
-//   });
-// });
+describe("sub-array to give the largest sum", function () {
+  it("[4,-1,2,1] is the subarray with largest sum, 6", function () {
+    assert.strictEqual(test.maxSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6);
+  });
+
+  it("[5, -3, 3, -4, 1, 1, -2, 2, 5, 2] is the subarray with largest sum, 10", function () {
+    assert.strictEqual(
+      test.maxSubarray([-3, 5, -3, 3, -4, 1, 1, -2, 2, 5, 2, -4, 2, -2]),
+      10
+    );
+  });
+});
 
 // 13. Given an array of integers and an integer k, find out whether there are two distinct indices i and
 // j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most
 // k.
 // #contains_duplicate_ii
 
-//   describe("contains duplicates at indices with max diiference of k", function () {
-//     it("[1,2,3,1] has element 1 at index 0 & 3 whose difference is 3 at max", function () {});
-//     assert.strictEqual(test.contains_duplicate_ii([1, 2, 3, 1], 3), true);
-//   });
-//   it("[1,0,1,1] has element 1 at index 0 ,2& 3 whose difference is 3 at max", function () {});
-//   assert.strictEqual(test.contains_duplicate_ii([1, 0, 1, 1], 1), true);
+describe("contains duplicates at indices with max diiference of k", function () {
+  it("[1,2,3,1] has element 1 at index 0 & 3 whose difference is 3 at max", function () {
+    assert.strictEqual(test.containsDuplicates([1, 2, 3, 1], 3), true);
+  });
 
-//   it("[1, 2, 3, 1, 2, 3] has duplicate elements whose difference is larger than the given max", function () {});
-//   assert.strictEqual(test.contains_duplicate_ii([1, 2, 3, 1, 2, 3], 2), false);
-// });
+  it("[1,0,1,1] has element 1 at index 0 ,2& 3 whose difference is 3 at max", function () {
+    assert.strictEqual(test.containsDuplicates([1, 0, 1, 1], 1), true);
+  });
+
+  it("[1, 2, 3, 1, 2, 3] has duplicate elements whose difference is larger than the given max", function () {
+    assert.strictEqual(test.containsDuplicates([1, 2, 3, 1, 2, 3], 2), false);
+  });
+});
 
 // 14. Given a list of words and two words word1 and word2, return the shortest distance between
 // these two words in the list.

@@ -8,6 +8,11 @@ exports.addTwoNumbers = addTwoNumbers;
 exports.gcfStrings = gcfStrings;
 exports.reverseVowels = reverseVowels;
 exports.moveZeros = moveZeros;
+exports.containsDuplicates = containsDuplicates;
+exports.maxSubarray = maxSubarray;
+exports.searchInsertPosition = searchInsertPosition;
+exports.missingNumber = missingNumber;
+exports.strobogrammaticNumber = strobogrammaticNumber;
 
 // ?---------- 1 --- not done
 /**
@@ -194,37 +199,155 @@ function addTwoNumbers(arr1, arr2) {
 
 // ?---------- 9 ----  not done
 
-// ?---------- 10 ----  not done
-
-// ?---------- 11 ----  not done
-
-// ?---------- 12 ----  not done
-
-// ?---------- 13 ----  not done
-
-
-function contains_duplicate_ii(arr){
-  let arrNew=[]
-  for(let i =0;i<arr.length;i++){
-    arr[i]
+function strobogrammaticNumber(str) {
+  if (
+    str.includes("2") ||
+    str.includes("3") ||
+    str.includes("4") ||
+    str.includes("5") ||
+    str.includes("7")
+  ) {
+    return false;
   }
 
-  return Boolean;
+  return true;
 }
 
-contains_duplicate_ii([1, 2, 3, 1], 3), true);
-  // ?---------- 14 ----  not done
+console.log(strobogrammaticNumber("134"));
 
-  // ?---------- 15 ----   done
+// 0,1,6,8,9 ... 0,1,8 always ...6,9 with condition -equal pairing rotate and reverse works just rotate doesnt work
 
-  function moveZeros(arr) {
-    let newArr = arr.sort((a, b) => (a > b ? 1 : -1));
+// ?---------- 10 ----   done
 
-    let shifted = shiftZeros(newArr);
-    return shifted;
-  };
+function missingNumber(arr) {
+  let missing;
+  arr.sort((a, b) => (a > b ? 1 : -1));
+  let i = 1;
+  while (i < arr.length) {
+    if (arr[i] - arr[i - 1] !== 1) {
+      missing = arr[i] - 1;
+      break;
+    }
+    i++;
+  }
+  return missing;
+}
+// console.log(missingNumber([3, 0, 1]));
+// console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]));
 
-console.log(moveZeros([0, 1, 0, 12, 3])); // Output: [1,3,12,0,0]
+// ([3, 0, 1]), 2
+// ([9, 6, 4, 2, 3, 5, 7, 0, 1]), 8
+
+// ?---------- 11 ----   done
+
+function searchInsertPosition(arr, n) {
+  let index;
+  if (arr.includes(n)) {
+    return arr.indexOf(n);
+  } else {
+    let concated = arr.concat(n);
+    concated.sort((a, b) => (a > b ? 1 : -1));
+    index = concated.indexOf(n);
+  }
+  return index;
+}
+// console.log(searchInsertPosition([1, 3, 5, 6], 5));
+// console.log(searchInsertPosition([1, 3, 5, 6], 2));
+// ([1, 3, 5, 6], 5), 2
+// ([1, 3, 5, 6], 2), 1
+
+// ?---------- 12 ----   done
+function maxSubarray(arr) {
+  let max = Math.max(...arr);
+  let tempSum = 0;
+
+  for (let j = 0; j < arr.length; j++) {
+    if (tempSum < arr[j]) {
+      if (tempSum < 0) {
+        tempSum = arr[j];
+        continue;
+      } else {
+        tempSum += arr[j];
+        continue;
+      }
+    } else {
+      tempSum += arr[j];
+      max = Math.max(tempSum, max);
+    }
+  }
+
+  return max;
+}
+// console.log(maxSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+// console.log(maxSubarray([-3, 5, -3, 3, -4, 1, 1, -2, 2, 5, 2, -4, 2, -2]));
+// [-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6
+// ?---------- 13 ----   done
+
+function containsDuplicates(arr, n) {
+  let arrDuplicates = findDuplicates(arr);
+  console.log(arrDuplicates);
+  for (let i = 0; i < arrDuplicates.length; i++) {
+    let myArr = arrDuplicates[i][2];
+    for (let j = 1; j < myArr.length; j++) {
+      if (myArr[j] - myArr[j - 1] <= n) {
+        console.log(myArr, j);
+
+        return true;
+      }
+    }
+
+    // if (arrDuplicates[i][2][1] - arrDuplicates[i][2][0] <= n) return true;
+  }
+  return false;
+}
+// console.log(containsDuplicates([1, 0, 2, 1, 6, 1, 2, 4, 6, 1], 1));
+
+function findDuplicates(array) {
+  let arr = array.slice();
+  let arrNew = [];
+  for (let i = 0; i < arr.length; i++) {
+    let count = 1;
+    let arrTemp = [];
+    arrTemp.push(i);
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] === arr[i]) {
+        count++;
+        arrTemp.push(j);
+        // console.log(arr);
+        arr.splice(j, 1, "x");
+        // console.log(arr);
+      }
+    }
+    if (count > 1) {
+      arrNew.push([arr[i], count, arrTemp]);
+    }
+  }
+  let refinedArr = [];
+  for (let each of arrNew) {
+    if (each[0] !== "x") {
+      refinedArr.push(each);
+    }
+  }
+
+  return refinedArr;
+}
+// console.log(findDuplicates([1, 2, 3, 1])); //   [[ 1, 3, [ 0, 3, 4 ] ], [ 2, 2, [ 1, 6 ] ], [ 3, 2, [ 2, 5 ] ]]
+
+let c = "d";
+// console.log(typeof c);
+// contains_duplicate_ii([1, 2, 3, 1], 3), true);
+// ?---------- 14 ----  not done
+
+// ?---------- 15 ----   done
+
+function moveZeros(arr) {
+  let newArr = arr.sort((a, b) => (a > b ? 1 : -1));
+
+  let shifted = shiftZeros(newArr);
+  return shifted;
+}
+
+// console.log(moveZeros([0, 1, 0, 12, 3])); // Output: [1,3,12,0,0]
 
 function shiftZeros(arr) {
   if (arr[0] === 0) {
