@@ -1,0 +1,23 @@
+3/12/2021
+
+Make web pages for the tip calculator and alarm.  Add the html and css validator links on each page.  Put the pages on your 
+github.io site and put links to them on your github pages homepage.  Submit the link to your github pages homepage in your 
+status report.  Note that all of your files will have to be in your github.io repository and in the expected relative folders 
+according to the path names on your html pages.
+
+Make the tip caclculator compute and display correct tip value in an unobtrusive way.
+
+Make the alarm application work as expected in an unobtrusive way. See alarm.gif image
+
+Extra credit 1(This is optional for those who are looking for more material.)
+  Look at the powTests.html file in the lesson13events folder of the 301DemosNew repository.  Use it as 
+  an example of how to run and display the results of Mocha tests in the browser.  Do the same
+  pattern for one or more of your homeworks from this course--e.g., arrayMethodTests, arrayReviewTests, 
+  recursionTests.  Put these pages into your github.io repository and links to them 
+  on your homepage.
+  
+Extra credit 2:  Look at the instructions on pages 2 and 3 of the github pages setup instructions 
+in the Resources / assignments folder on Sakai.  Try using those to link put links to your 
+301 repository files without copying them to the github pages repository.
+  
+  

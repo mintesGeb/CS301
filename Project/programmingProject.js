@@ -13,6 +13,8 @@ exports.maxSubarray = maxSubarray;
 exports.searchInsertPosition = searchInsertPosition;
 exports.missingNumber = missingNumber;
 exports.strobogrammaticNumber = strobogrammaticNumber;
+exports.columnNumber = columnNumber;
+exports.columnTitle = columnTitle;
 
 // ?---------- 1 --- not done
 /**
@@ -167,6 +169,7 @@ function addTwoNumbers(arr1, arr2) {
 // console.log(addTwoNumbers([1, 1], [1, 2, 3]));
 
 // ?---------- 6 ----  nod done
+
 // function binaryAddition(str1, str2) {
 //   str1 = Number(str1);
 //   str2 = Number(str2);
@@ -195,9 +198,97 @@ function addTwoNumbers(arr1, arr2) {
 // }
 // ?---------- 7 ----  not done
 
+function columnTitle(n) {
+  const letters = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+
+  let title = "";
+  let rem = n % 26;
+  let quo = Math.floor(n / 26);
+
+  if (n <= 26) {
+    title += letters[n - 1];
+  }
+  if (n > 26) {
+    title = "" + letters[quo - 1] + letters[rem - 1];
+  }
+
+  return title;
+}
+console.log(columnTitle(701));
+
 // ?---------- 8 ----  not done
 
-// ?---------- 9 ----  not done
+function columnNumber(title) {
+  title = title.toUpperCase();
+  const letters = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  let num;
+  if (title.length === 1) {
+    num = letters.indexOf(title) + 1;
+  } else {
+    let rem = letters.indexOf(title[1]) + 1;
+    let quo = letters.indexOf(title[0]) + 1;
+    num = quo * 26 + rem;
+  }
+
+  return num;
+}
+console.log(columnNumber("ad"));
+
+// ?---------- 9 ----   done
 
 function strobogrammaticNumber(str) {
   if (
@@ -208,12 +299,35 @@ function strobogrammaticNumber(str) {
     str.includes("7")
   ) {
     return false;
+  } else {
+    if (str.length % 2 !== 0) {
+      //odd case
+      let middleIndex = Math.floor(str.length / 2);
+      if (str[middleIndex] === "9" || str[middleIndex] === "6") return false;
+    }
+
+    //even case plus odd
+    let j = str.length - 1;
+    for (let i = 0; i < str.length / 2; i++) {
+      if (
+        str[i] === "9" ||
+        (str[i] === "6" && str[j] === "9") ||
+        str[j] === "6"
+      ) {
+        if (str[i] === "9" && str[j] === "9") return false;
+        else if (str[i] === "6" && str[j] === "6") return false;
+      } else {
+        if (str[i] !== str[j]) return false;
+      }
+
+      j--;
+    }
   }
 
   return true;
 }
 
-console.log(strobogrammaticNumber("134"));
+// console.log(strobogrammaticNumber("068619890"));
 
 // 0,1,6,8,9 ... 0,1,8 always ...6,9 with condition -equal pairing rotate and reverse works just rotate doesnt work
 

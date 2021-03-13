@@ -86,50 +86,51 @@ describe("add array elements as numbers", function () {
 // The input strings are both non-empty and contains only characters 1 and 0.
 // #add_binary
 
-// describe("add binary", function () {
-//   it("adding the binary strings '11' and '1' should give '100 ", function () {
-//     assert.strictEqual(test.addBinary("11", "1"), "100");
-//   });
+describe("add binary", function () {
+  it("adding the binary strings '11' and '1' should give '100 ", function () {
+    assert.strictEqual(test.addBinary("11", "1"), "100");
+  });
 
-//   it("adding the binary strings '1010' and '1011' should give '10101 ", function () {
-//     assert.strictEqual(test.addBinary("1010", "1011"), "10101");
-//   });
-// });
+  it("adding the binary strings '1010' and '1011' should give '10101 ", function () {
+    assert.strictEqual(test.addBinary("1010", "1011"), "10101");
+  });
+});
 
 // 7. Given a positive integer, return its corresponding column title as appear in an Excel Sheet.
 // For example:
 // 1 →A, 2→B, 3→C,…,26→z,27→AA, →28->AB, …
 // #excel_sheet_column_title
 
-// describe("columnTitle ", function () {
-//   it("26 should return Z", function () {
-//     assert.strictEqual(test.columnTitle(26), "Z");
-//   });
+describe("columnTitle ", function () {
+  it("26 should return Z", function () {
+    assert.strictEqual(test.columnTitle(26), "Z");
+  });
 
-//   it("28 should return AB", function () {
-//     assert.strictEqual(test.columnTitle(28), "AB");
-//   });
+  it("28 should return AB", function () {
+    assert.strictEqual(test.columnTitle(28), "AB");
+  });
 
-//   it("701 should return ZY", function () {
-//     assert.strictEqual(test.columnTitle(701), "ZY");
-//   });
-// });
+  it("701 should return ZY", function () {
+    assert.strictEqual(test.columnTitle(701), "ZY");
+  });
+});
 
 // 8. Given a column title as appear in an excel sheet, return its corresponding column number.
 // #excel_sheet_column_number
 
-// describe("column Number ", function () {
-//   it("Z should return 26", function () {
-//     assert.strictEqual(test.columnNumber("Z"), "26");
-//   });
+describe("column Number ", function () {
+  it("Z should return 26", function () {
+    assert.strictEqual(test.columnNumber("Z"), 26);
+  });
 
-//   it("AB should return 28", function () {
-//     assert.strictEqual(test.columnNumber("AB"), 28);
-//   });
+  it("AB should return 28", function () {
+    assert.strictEqual(test.columnNumber("AB"), 28);
+  });
 
-//   it("ZY should return 701", function () {
-//     assert.strictEqual(test.columnNumber("ZY"), 701);
-//   });
+  it("ZY should return 701", function () {
+    assert.strictEqual(test.columnNumber("ZY"), 701);
+  });
+});
 
 // 9.  A strobogrammatic number is a number that looks the same when rotated 180 degree (looked
 //   upside down)
