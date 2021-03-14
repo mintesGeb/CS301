@@ -196,7 +196,7 @@ function addTwoNumbers(arr1, arr2) {
 //     }
 //   }
 // }
-// ?---------- 7 ----  not done
+// ?---------- 7 ----   done
 
 function columnTitle(n) {
   const letters = [
@@ -243,7 +243,7 @@ function columnTitle(n) {
 }
 console.log(columnTitle(701));
 
-// ?---------- 8 ----  not done
+// ?---------- 8 ----   done
 
 function columnNumber(title) {
   title = title.toUpperCase();
