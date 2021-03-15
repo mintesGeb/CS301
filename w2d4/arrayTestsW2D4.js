@@ -109,7 +109,7 @@ describe("filter map reduce string", function () {
 
 describe("filterRange", function () {
   it("tests [0, 100, 3, 6, -555], 6, 160", function () {
-    assert.strictDeepEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 160), [
+    assert.deepStrictEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 160), [
       100,
       6,
     ]);
@@ -119,7 +119,7 @@ describe("filterRange", function () {
 /* 8.	Write a function that takes an array of strings and returns array of palindrome strings only. */
 describe("filterPalindromes", function () {
   it("tests [not, a, kayak, eagle, racecar]", function () {
-    assert.strictDeepEqual(
+    assert.deepStrictEqual(
       arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]),
       ["a", "kayak", "racecar"]
     );

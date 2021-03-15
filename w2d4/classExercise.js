@@ -24,3 +24,12 @@ for (let i = 0; i < 10; i++) {
 }
 console.log(arrRandom);
 console.log(findAverage(arrRandom));
+
+let x = "32, 105,  -22";
+let y = x.split(",");
+console.log();
+let arrNew = [];
+for (let each of y) {
+  arrNew.push(each.trim());
+}
+console.log(arrNew);

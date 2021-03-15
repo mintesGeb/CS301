@@ -3,97 +3,170 @@
 exports.insertArray = spliceInsert;
 exports.isArrayEqual = isArrayEqual;
 exports.isPalindrome = isPalindrome;
-exports.reverse2String = reverseAndJoin;
+exports.reverse2String = reverse2String;
 exports.enhancedIncludes = enhancedIncludes;
 exports.ssReverse = ssReverse;
 exports.mergeTwo = mergeTwo;
 
 // --------------------------- // --------------------------- //
-function spliceInsert(n, arr1, arr2) {
-  for (let element of arr2) {
-    arr1.splice(n, 0, element);
-    n++;
-  }
-  return arr1;
-}
+// function spliceInsert(n, arr1, arr2) {
+//   for (let element of arr2) {
+//     arr1.splice(n, 0, element);
+//     n++;
+//   }
+//   return arr1;
+// }
 // console.log(spliceInsert(2, [1, 2, 6], [3, 4, 5]));
 
 // let x = [1, 2, 4];
 // x.splice(2, 0, 3);
 // console.log(x);
 
-// --------------------------- // --------------------------- //
-function isArrayEqual(arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  for (let i = 0; i < arr1.length; i++) {
-    // if (!arr2.includes(arr1[i])) return false;
-    if (arr1[i] !== arr2[i]) return false;
+function spliceInsert(n, arr1, arr2) {
+  for (let each of arr2) {
+    arr1.splice(n, 0, each);
+    n++;
   }
-  return true;
+  return arr1;
 }
 
-let array1 = [0, 1, 2];
-let array2 = [2, 1, 0];
-let array3 = [0, 1, 2];
+// --------------------------- // --------------------------- //
+// function isArrayEqual(arr1, arr2) {
+//   if (arr1.length !== arr2.length) return false;
+//   for (let i = 0; i < arr1.length; i++) {
+//     // if (!arr2.includes(arr1[i])) return false;
+//     if (arr1[i] !== arr2[i]) return false;
+//   }
+//   return true;
+// }
+
+// let array1 = [0, 1, 2];
+// let array2 = [2, 1, 0];
+// let array3 = [0, 1, 2];
 
 // console.log(isArrayEqual(array1, array3));
 
 // console.log(array2.includes(1));
-// --------------------------- // --------------------------- //
-function isPalindrome(arr) {
-  let newArr = arr.slice();
 
-  let reversed = newArr.reverse();
-  const checkResult = isArrayEqual(newArr, arr);
-  return checkResult;
+function isArrayEqual(arr1, arr2) {
+  if (arr1.length !== arr2.length) return false;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) return false;
+  }
+  return true;
 }
+// --------------------------- // --------------------------- //
+// function isPalindrome(arr) {
+//   let newArr = arr.slice();
+
+//   let reversed = newArr.reverse();
+//   const checkResult = isArrayEqual(newArr, arr);
+//   return checkResult;
+// }
 // console.log(isPalindrome([2, 3, 3, 2, 1]));
-// --------------------------- // --------------------------- //
 
-function reverse(arr) {
-  return arr.reverse();
-}
-
-function join(arr) {
-  return arr.join("_");
-}
-
-function reverseAndJoin(arr) {
-  return join(reverse(arr));
-}
-// console.log(reverseAndJoin(["Quick", "Brown", "Fox"]));
-// --------------------------- // --------------------------- //
-function enhancedIncludes(arr, n) {
-  let exists = arr.includes(n);
-  let arrIndex = [];
-
+function isPalindrome(arr1) {
+  let arrReversed = arr1.slice();
   let i = 0;
-
-  while (i < arr.length) {
-    if (arr[i] === n) {
-      arrIndex.push(i);
-    }
+  while (i < arrReversed.length) {
+    let popped = arrReversed.pop();
+    arrReversed.splice(i, 0, popped);
     i++;
   }
-
-  arrIndex = arrIndex.slice(0, 1).concat(arrIndex.slice(-1));
-  arrIndex.unshift(exists);
-
-  return arrIndex;
+  return isArrayEqual(arr1, arrReversed);
 }
-// console.log(enhancedIncludes([1, 4, 2, 3, 4, 5], 4));
+
 // --------------------------- // --------------------------- //
-function ssReverse(arr) {
-  let arrNew = [];
-  for (let i = arr.length; i > 0; i--) {
-    arr = arr.slice(0, i);
-    let sliced = arr.slice(i - 1);
-    arrNew = arrNew.concat(sliced);
-  }
 
-  return arrNew;
+// function reverse(arr) {
+//   return arr.reverse();
+// }
+
+// function join(arr) {
+//   return arr.join("_");
+// }
+
+// function reverseAndJoin(arr) {
+//   return join(reverse(arr));
+// }
+// console.log(reverseAndJoin(["Quick", "Brown", "Fox"]));
+
+function reverse2String(arr) {
+  let reversed = arr.reverse();
+  let joined = reversed.join("_");
+  return joined;
 }
 
+// --------------------------- // --------------------------- //
+// function enhancedIncludes(arr, n) {
+//   let exists = arr.includes(n);
+//   let arrIndex = [];
+
+//   let i = 0;
+
+//   while (i < arr.length) {
+//     if (arr[i] === n) {
+//       arrIndex.push(i);
+//     }
+//     i++;
+//   }
+
+//   arrIndex = arrIndex.slice(0, 1).concat(arrIndex.slice(-1));
+//   arrIndex.unshift(exists);
+
+//   return arrIndex;
+// }
+// console.log(enhancedIncludes([1, 4, 2, 3, 4, 5], 4));
+
+function enhancedIncludes(arr, n) {
+  let array = [];
+  array.push(exists(arr, n));
+  let index = arr.indexOf(n);
+  array.push(exists(arr, n) ? index : -1);
+  let lastIndex = arr.lastIndexOf(n);
+  array.push(exists(arr, n) ? lastIndex : -1);
+
+  return array;
+}
+function exists(array1, n) {
+  if (array1.includes(n)) return true;
+  return false;
+}
+
+// --------------------------- // --------------------------- //
+// function ssReverse(arr) {
+//   let arrNew = [];
+//   for (let i = arr.length; i > 0; i--) {
+//     arr = arr.slice(0, i);
+//     let sliced = arr.slice(i - 1);
+//     arrNew = arrNew.concat(sliced);
+//   }
+
+//   return arrNew;
+// }
+
+// function ssReverse(arr) {
+//   let copy = arr.slice();
+//   console.log(copy);
+//   let i = 1;
+//   while (i < copy.length) {
+//     let sliced = copy.slice(i, i + 1);
+//     console.log(sliced);
+//     copy.splice(0, 0, sliced[0]);
+//     i++;
+//   }
+//   return copy;
+// }
+// function ssReverse(arr) {
+//   let copy = arr.slice();
+//   let firstElement = arr[0];
+//   function reverse(arr) {
+//     if (arr[arr.length - 1] === firstElement) return "";
+//     return reverse(arr.slice(1)) + arr.slice(0)[0];
+//   }
+//   let arr2 = reverse(copy);
+//   return arr2;
+// }
 // console.log(ssReverse([1, 2, 3, 4, 5, 6]));
 
 // let x = [];
@@ -163,23 +236,44 @@ function orderRight(exp) {
 //   balanceStatus = "Not Balanced";
 // }
 // --------------------------- // --------------------------- //
-function mergeTwo(arr1, arr2) {
-  for (let each of arr2) {
-    arr1.push(each);
-  }
-  arr1.sort(comparator);
-  return arr1;
-}
+// function mergeTwo(arr1, arr2) {
+//   for (let each of arr2) {
+//     arr1.push(each);
+//   }
+//   arr1.sort(comparator);
+//   return arr1;
+// }
 
-console.log(mergeTwo([1, 3, 8], [0, 5, 9]));
+// console.log(mergeTwo([1, 3, 8], [0, 5, 9]));
 // let a = [33, 512, 23, 23, 6, 323, 53, 24];
 // let x = a.sort(comparator);
 
 // console.log(x);
 
-function comparator(a, b) {
-  if (a > b) return 1;
-  if (a === b) return 0;
-  if (a < b) return -1;
-}
+// function comparator(a, b) {
+//   if (a > b) return 1;
+//   if (a === b) return 0;
+//   if (a < b) return -1;
+// }
 // --------------------------- // --------------------------- //
+function mergeTwo(arr1, arr2) {
+  let arrNew = arr1.concat(arr2);
+  let sorted = arrNew.sort((a, b) => a - b);
+  return sorted;
+}
+// console.log(mergeTwo([1, 3, 8], [0, 5, 9]));
+// --------------------------- // --------------------------- //
+function ssReverse(arr) {
+  let arrNew = [];
+  let arrCopy = arr.slice();
+  arrNew.unshift(arrCopy[0]);
+  console.log(arrCopy);
+  let i = 1;
+  while (i < arrCopy.length) {
+    arrNew.unshift(arr[i]);
+    i++;
+  }
+
+  return arrNew;
+}
+console.log(ssReverse([1, 2, 3, 4, 5, 6]));

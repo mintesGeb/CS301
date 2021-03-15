@@ -323,4 +323,24 @@ function countDigits(n) {
 }
 // console.log(countDigits(1231234));
 
-function reverse(str) {}
+function reverse(str) {
+  if (str === "") return "";
+  return reverse(str.slice(1)) + str[0];
+}
+// console.log(reverse("mintes"));
+// =------------------------=
+let car = {};
+car.make = "Toyota";
+car.model = "Camry";
+console.log(car);
+car.model = "Rav4";
+console.log(car);
+delete car.model;
+console.log(car);
+// =------------------------=
+function isPersonEqual(obj1, obj2) {
+  if (obj1.name === obj2.name && obj1.age === obj2.age) {
+    return true;
+  }
+  return false;
+}
