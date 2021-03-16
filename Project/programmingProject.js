@@ -34,8 +34,16 @@ function checkPrime(num) {
   }
   return isPrime;
 }
-// console.log(checkPrime(49));
+console.log(checkPrime(139));
 
+function nextPrime(num) {
+  let i = num + 1;
+  while (i > num) {
+    if (checkPrime(i)) return i;
+    i++;
+  }
+}
+console.log(nextPrime(3));
 /**
  *
  * @param {number} num number to check if the last digit is
@@ -44,22 +52,36 @@ function checkPrime(num) {
 function endsIn9(num) {
   let endsInNine = true;
   let lastDigit = num % 10;
-  if (lastDigit !== 9) return (endsInNine = false);
+  if (lastDigit !== 9) endsInNine = false;
   return endsInNine;
 }
-// console.log(endsIn9(139));
+console.log(endsIn9(139));
 
-function nextPrimeNumEndingIn9(num) {
-  let arr = [];
-  for (let i = num + 1; i < 150; i++) {
-    if (checkPrime(i) && endsIn9(i)) {
-      arr.push(i);
-    }
-  }
-  return arr;
-}
+// function nextPrimeNumEndingIn9(num) {
+//   let arr = [];
+//   for (let i = num + 1; i < 150; i++) {
+//     if (checkPrime(i) && endsIn9(i)) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr;
+// }
 // console.log(nextPrimeNumEndingIn9(50));
 
+// function nextPrimenumberThatEndsInNine(num) {
+//   let isProcupine = false;
+//   if (checkPrime(num)) {
+//     if (endsIn9(num)) {
+//       if (endsIn9(nextPrime(num))) {
+//         isProcupine = true;
+//         return nextPrime(num);
+//       } else {
+//         nextPrimenumberThatEndsInNine(nextPrime(num));
+//       }
+//     } else nextPrime(num);
+//   }
+//   nextPrime(num);
+// }
 // function countPrimesInBetween(arr) {
 //   for (let i = 0; i < arr.length; i++) {
 //     for (let j = arr[i]; j < arr[i + 1]; j++) {
@@ -73,8 +95,33 @@ function nextPrimeNumEndingIn9(num) {
  * @param {number} num number to start from while finding the next porcupine
  * @returns {number} arr[0] the porcupine number
  */
-function findPorcupineNumber(num) {}
-// console.log(findPorcupineNumber(39));
+// function findPorcupineNumber(num) {
+//   let porcupineNumber;
+//   // let isporcupine = false;
+//   if (checkPrime(num)) {
+//     if (endsIn9(num)) {
+//       if (endsIn9(nextPrime(num))) {
+//         porcupineNumber = num;
+//       } else {
+//         findPorcupineNumber(nextPrime(num));
+//       }
+//     } else {
+//       findPorcupineNumber(nextPrime(num));
+//     }
+//   } else {
+//     findPorcupineNumber(nextPrime(num));
+//   }
+//   return porcupineNumber;
+// }
+function findPorcupineNumber(num) {
+  if (endsIn9(num) && checkPrime(num) && endsIn9(nextPrime(num))) {
+    return num;
+  }
+  return findPorcupineNumber(nextPrime(num));
+}
+console.log("------");
+console.log(findPorcupineNumber(138));
+console.log("------");
 
 // ?---------- 2 ---- done
 
@@ -196,6 +243,92 @@ function addTwoNumbers(arr1, arr2) {
 //     }
 //   }
 // }
+function reverse(str) {
+  let splitted = str.split("");
+  let reversed = splitted.reverse();
+  return reversed.join("");
+}
+console.log(reverse("thy"));
+function binaryAddition(str1, str2) {
+  let sum = "";
+  let rem = "0";
+  for (let i = Math.max(str1.length - 1, str2.length - 1); i >= 0; i--) {
+    let j = Math.min(str1.length - 1, str2.length - 1);
+    let toSum = str1[i] + str2[j];
+    console.log(toSum);
+    if (rem === "0") {
+      if (toSum === "11") {
+        sum += "0";
+        rem = "1";
+      } else if (toSum === "10" || toSum === "01") {
+        sum += "1";
+      } else if (toSum === "1undefined" || toSum === "undefined1") {
+        sum += "1";
+      } else if (toSum === "0undefined" || toSum === "undefined0") {
+        sum += "0";
+      }
+    } else {
+      if (toSum === "11") {
+        sum += "1";
+        rem = "1";
+      } else if (toSum === "10" || toSum === "01") {
+        sum += "0";
+        rem = "1";
+      } else if (toSum === "1undefined" || toSum === "undefined1") {
+        sum += "0";
+        rem = "1";
+      } else if (toSum === "0undefined" || toSum === "undefined0") {
+        sum += "1";
+      }
+    }
+    j--;
+    if (j === 0) str2 = "";
+  }
+
+  if (rem !== "0") return reverse(sum + rem);
+  return reverse(sum);
+}
+console.log(binaryAddition("11", "11"));
+
+// let rem = "0";
+// function binaryAddition(str1, str2) {
+//   if (str2.length===0 && str1.length===0) return "";
+
+//   let toSum = str1[-1] + str2[-1];
+//     if (rem === "0") {
+//       if (toSum === "11") {
+//         sum += "0";
+//         rem = "1";
+//       } else if (toSum === "10" || toSum === "01") {
+//         sum += "1";
+//       } else if (toSum === "1undefined" || toSum === "undefined1") {
+//         sum += "1";
+//       } else if (toSum === "0undefined" || toSum === "undefined0") {
+//         sum += "0";
+//       }
+//     } else {
+//       if (toSum === "11") {
+//         sum += "1";
+//         rem = "1";
+//       } else if (toSum === "10" || toSum === "01") {
+//         sum += "0";
+//         rem = "1";
+//       } else if (toSum === "1undefined" || toSum === "undefined1") {
+//         sum += "0";
+//         rem = "1";
+//       } else if (toSum === "0undefined" || toSum === "undefined0") {
+//         sum += "1";
+//       }
+
+//   return binaryAddition(str1.slice(0,-1), str2.slice(0,-1))+ toSum ;
+
+// }
+
+// console.log(binaryAddition("1", "0"));
+
+console.log("^");
+// (a = "11"), (b = "1");
+// a="1010", b ="1011"
 // ?---------- 7 ----   done
 
 function columnTitle(n) {
@@ -534,37 +667,53 @@ function splitStr(str) {
 
 // ?---------- 17 ----  not done
 
-function summaryRanges(array) {
-  let arr2 = [];
+// function summaryRanges(array) {
+//   let arr2 = [];
 
-  helper(array);
+//   helper(array);
 
-  function helper(arr) {
-    for (let i = 1; i < arr.length; i++) {
-      // if (i === arr.length - 1) {
-      //   arr2.push(`${arr[0]}->${arr[i]}`);
-      //   break;
-      // } else {
-      if (arr[i] - arr[i - 1] !== 1) {
-        arr2.push(`${arr[0]}->${arr[i - 1]}`);
+//   function helper(arr) {
+//     for (let i = 1; i < arr.length; i++) {
+//       // if (i === arr.length - 1) {
+//       //   arr2.push(`${arr[0]}->${arr[i]}`);
+//       //   break;
+//       // } else {
+//       if (arr[i] - arr[i - 1] !== 1) {
+//         arr2.push(`${arr[0]}->${arr[i - 1]}`);
 
-        let arrNew = arr.slice(i);
-        console.log(arrNew);
+//         let arrNew = arr.slice(i);
+//         console.log(arrNew);
 
-        if (arrNew.length === 1) {
-          arr2.push(`${arrNew[0]}`);
-          arr = [];
-          break;
-        } else helper(arrNew);
-      }
-      // }
-    }
-    return arr2;
+//         if (arrNew.length === 1) {
+//           arr2.push(`${arrNew[0]}`);
+//           arr = [];
+//           break;
+//         } else helper(arrNew);
+//       }
+//       // }
+//     }
+//     return arr2;
+//   }
+
+//   return arr2;
+// }
+console.log("^");
+function summaryRanges(arr) {
+  let array = [];
+  for (let i = 1; i < arr.length; i++) {
+    let start = 0;
+    let end = 0;
+    if (arr[i] - arr[i - 1] === 1) {
+      start = i - 1;
+    } else end = arr[i - 1];
+    array.push([arr[start], arr[end]]);
+    arr = arr.splice(start, end - start);
   }
-
-  return arr2;
+  return arr;
 }
-// console.log(summaryRanges([1, 2, 3, 5, 6, 7, 9]));
+
+console.log(summaryRanges([1, 2, 3, 5, 6, 7]));
+// console.log(summaryRanges([1, 2, 3, 5, 6, 7,9]));
 // console.log(summaryRanges([0, 1, 2, 4, 5, 7]));
 // summaryRanges([0, 1, 2, 4, 5, 7]), [
 //       "0->2",
