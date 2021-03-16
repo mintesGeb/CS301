@@ -584,7 +584,7 @@ let c = "d";
 // console.log(typeof c);
 // contains_duplicate_ii([1, 2, 3, 1], 3), true);
 // ?---------- 14 ----  not done
-
+function shortestWordDistance(arr, str1, str2) {}
 // ?---------- 15 ----   done
 
 function moveZeros(arr) {

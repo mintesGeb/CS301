@@ -246,14 +246,28 @@ describe("contains duplicates at indices with max diiference of k", function () 
 // Note: You may assume that word1 does not equal to word2, and word1 and word2 are both in
 // the list.
 // #shortest_word_distance
-// Assume the words ["practice", "makes", "perfect", "coding", "makes]
+// Assume the words ["practice", "makes", "perfect", "coding", "makes"]
 
 describe("shortest_word_distance", function () {
   it('shortest word distance between "coding"&"practice"', function () {
-    assert.strictEqual(test.shortestWordDistance("coding", "practice"), 3);
+    assert.strictEqual(
+      test.shortestWordDistance(
+        ["practice", "makes", "perfect", "coding", "makes"],
+        "coding",
+        "practice"
+      ),
+      3
+    );
   });
   it('shortest word distance between "makes"&"coding"', function () {
-    assert.strictEqual(test.shortestWordDistance("makes", "coding"), 1);
+    assert.strictEqual(
+      test.shortestWordDistance(
+        ["practice", "makes", "perfect", "coding", "makes"],
+        "makes",
+        "coding"
+      ),
+      1
+    );
   });
 });
 
