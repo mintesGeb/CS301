@@ -66,9 +66,9 @@ describe("Most frequent", function () {
 // For e.g., [4,2, -1,3,-2,-3] → [2,-2]
 
 describe("sum closest to zero", function () {
-  //   it("pair whose sum is closest to zero is [2,-2]", function () {
-  //     assert.strictEqual(test.closestToZero([4, 2, -1, 3, -2, -3]), [2, -2]);
-  //   });
+  it("pair whose sum is closest to zero is [2,-2]", function () {
+    assert.deepStrictEqual(test.closestToZero([4, 2, -1, 3, -2, -3]), [2, -2]);
+  });
 
   it("pair whose sum is closest to zero is [1, -1] ", function () {
     assert.deepStrictEqual(test.closestToZero([1, 4, -1, -2, -5]), [1, -1]);
