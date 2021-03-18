@@ -1,0 +1,19 @@
+Hi Professor,
+I have completed all the project questions and uploaded to this github link:
+
+https://github.com/mintesGeb/WebAppCollections
+
+I am glad you gave these extra credit projects because I really had fun working on these.
+The mocha test to display the test on the web looks really good and I'm glad I learned to integrate it with the html. Now I know how to do it I'll do more of these test on my programs on the web. Here are my examples: 
+
+https://mintesgeb.github.io/WebAppCollections/
+
+And the final html, css and js integration was a good project I worked on today. I was thinking of doing it on my own before you gave the extra-credit assignment , but this gave me an opportunity to learn and practice. I have used bootstrap framework to begin and part of my own css. I will continue to build on it and make it into big project in the coming weeks. It is mostly responsive , but not completely. Here is the link to it:
+​​​​​​​
+https://mintesgeb.github.io/webApps/ 
+
+
+
+Thank you
+
+Mintes
